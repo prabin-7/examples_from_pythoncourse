@@ -1,4 +1,4 @@
-colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
+colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet","purple"]
 list_1 = []
 for index,color in enumerate(colors):
     
