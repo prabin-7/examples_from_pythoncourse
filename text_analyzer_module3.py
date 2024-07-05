@@ -22,12 +22,15 @@ class TextAnalzer(object):
         return dict    
     def freqOf(self,word):
         # get frequency map
-        freq = {}
-        key = word
-        for items in set(self.words):          # item was used for loop as using key overwrites the value of input word    
-            freq[key]= self.words.count(key)
-        return freq[key]
-    
+        freq = self.freqAll()
+        # key = word
+        # for items in set(self.words):          # item was used for loop as using key overwrites the value of input word    
+        #     freq[key]= self.words.count(key)
+        # return freq[key]
+        if word in freq:
+            return freq[word]
+        else: 
+            return 0
 
 
 givenstring="Lorem ipsum dolor! diam amet,\
@@ -37,5 +40,5 @@ givenstring="Lorem ipsum dolor! diam amet,\
 analyze = TextAnalzer(givenstring)
 
 print(analyze.freqAll())
-input_word = "diam"                    #take input from user in next version
+input_word = "hello"                    #take input from user in next version
 print(f'The count of {input_word} is ',analyze.freqOf(input_word))
