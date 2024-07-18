@@ -1,0 +1,4 @@
+line 1
+line 2 for testing 
+line 3 this is where we start the file handling with python
+bjkjk
